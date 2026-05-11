@@ -1,0 +1,32 @@
+/* se muestra en un cuadro de diálogo de salida lo que se introdujo */
+        JOptionPane.showMessageDialog(null, entradaCampoTamanoDefinido);
+    }
+});
+
+/* se especifica que el administrador de elementos gráficos para 
+panel_2 será AbsoluteLayout */
+panel_2.setLayout(new AbsoluteLayout());
+
+/* se agrega campo por campo de texto al panel_2 con sus respectivas coordenadas */
+panel_2.add(campoNoEditable, new AbsoluteConstraints(20, 20));
+panel_2.add(campoTextoPredefinido, new AbsoluteConstraints(20, 60));
+panel_2.add(campoTamanoDefinido, new AbsoluteConstraints(20, 100));
+
+// se especifica el tamaño del panel_2
+panel_2.setSize(300, 200);
+
+// se indica que será visible el panel_2
+panel_2.setVisible(true);
+
+// se determina que el panel no podrá ser redimensionado
+panel_2.setResizable(false);
+
+/* se indica que cuando se cierre el panel_2 se terminará la ejecución del programa */
+panel_2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+}
+
+public static void main(String[] args) {
+    /* se crea un objeto de la clase CuadrosTexto_1 por lo que automáticamente 
+    se llamará al constructor de esa clase */
+    CuadrosTexto_1 objeto = new CuadrosTexto_1();
+}
