@@ -1,0 +1,39 @@
+/* Se crean las etiquetas que aparecerán del lado derecho en la ventana */
+JLabel precios = new JLabel("Precios");
+JLabel precio1 = new JLabel("X $5.50");
+JLabel precio2 = new JLabel("X $8.00");
+JLabel precio3 = new JLabel("X $1.30");
+JLabel precio4 = new JLabel("X $6.00");
+JLabel precio5 = new JLabel("X $15.50");
+
+// se crea la etiqueta "TOTAL"
+JLabel total = new JLabel("TOTAL");
+
+/* se crea un campo de texto donde se mostrará el resultado del cálculo,
+por eso se inhabilita */
+final JTextField pago = new JTextField(5);
+pago.setEnabled(false);
+
+// se crea el botón "Calcular"
+JButton calcular = new JButton("Calcular");
+
+/* se especifica que se manejarán los eventos del botón "Calcular". 
+Es decir, al dar clic sobre él, se obtendrán los valores introducidos 
+en los campos de texto, para convertirlos en datos de tipo int, 
+multiplicarlos por la cantidad correspondiente y guardar los resultados 
+en variables de tipo double */
+calcular.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent ae) {
+        double calculo1 = (double) Integer.parseInt(campo1.getText()) * 5.50;
+        double calculo2 = (double) Integer.parseInt(campo2.getText()) * 8.00;
+        double calculo3 = (double) Integer.parseInt(campo3.getText()) * 1.30;
+        double calculo4 = (double) Integer.parseInt(campo4.getText()) * 6.00;
+        double calculo5 = (double) Integer.parseInt(campo5.getText()) * 15.50;
+
+        // se realiza la suma del total
+        double calculoTotal = calculo1 + calculo2 + calculo3 + calculo4 + calculo5;
+
+        // se muestra en el campo de texto el resultado
+        pago.setText(String.valueOf(calculoTotal));
+    }
+});
