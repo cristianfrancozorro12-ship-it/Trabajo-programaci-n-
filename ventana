@@ -1,0 +1,7 @@
+int n = Integer.parseInt(JOptionPane.showInputDialog(null, "¿Cuántos números voy a leer?", "Ventana inicial", JOptionPane.QUESTION_MESSAGE));
+
+for (int i = 1; i <= n; i++) {
+    suma = suma + Double.parseDouble(JOptionPane.showInputDialog(null, "Dame el número " + i + " de " + n, "Ventana de captura de números", JOptionPane.QUESTION_MESSAGE));
+}
+
+JOptionPane.showMessageDialog(null, "El promedio de los números es " + (suma / n), "Ventana de resultado", JOptionPane.INFORMATION_MESSAGE);
