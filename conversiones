@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class conversiones {
+    public static void main(String args []) {
+
+        // declaración de variables
+        double numero;
+        String cadena;
+        int entero;
+        float flotante;
+        char caracter;
+        short corto;
+        long largo;
+
+        // se crea un objeto de la clase Scanner
+        Scanner leer = new Scanner(System.in);
+
+        // se pide un número double, se lee y se guarda en número
+        System.out.print("Dame el número double: ");
+        numero = leer.nextDouble();
+
+        System.out.println("Conversiones:");
+        
+        // se convierte número a int y se guarda en entero
+        entero = (int) numero;
+
+        // se convierte número a float y se guarda en flotante
+        flotante = (float) numero;
+
+        // se convierte número a char y se guarda en caracter
+        caracter = (char) entero;
+    }
+}
