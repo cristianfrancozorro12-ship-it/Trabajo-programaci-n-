@@ -1,0 +1,28 @@
+panel.add(aportaciones, new AbsoluteConstraints(160, 20));
+        panel.add(aportacion1, new AbsoluteConstraints(160, 60));
+        panel.add(aportacion2, new AbsoluteConstraints(160, 90));
+        panel.add(aportacion3, new AbsoluteConstraints(160, 120));
+
+        // se especifica el tamaño de lo ancho y lo alto del panel
+        panel.setSize(400, 200);
+
+        // se indica que el panel será visible
+        panel.setVisible(true);
+
+        /* Se indica que no podrá redefinirse el tamaño del panel. 
+           Así que aunque el usuario intente modificar el tamaño de la ventana 
+           al posicionar el cursor en una esquina, ésta conservará su tamaño 
+           especificado siempre. */
+        panel.setResizable(false);
+
+        /* se indica que al dar clic en el botón de cerrar la ventana se 
+           terminará la ejecución */
+        panel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    /* se declara la clase principal, se crea un objeto de la clase 
+       Etiquetas_1 para poder crear la interfaz */
+    public static void main(String[] args) {
+        Etiquetas_1 objeto = new Etiquetas_1();
+    }
+}
