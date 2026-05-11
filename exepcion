@@ -1,0 +1,24 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class ProgramaExcepcion1 {
+    public static void main(String [] args) {
+        Scanner leer = new Scanner(System.in);
+        int a = 0, b = 0;
+
+        try { // inicia código "vigilado"
+            System.out.print("Dame un número entero: ");
+            a = leer.nextInt();
+            System.out.print("Dame otro número entero: ");
+            b = leer.nextInt();
+            
+        } catch (InputMismatchException e) {
+            /* si existe una excepción del tipo InputMismatchException 
+               realiza lo que esté dentro de este bloque */
+            System.out.println("Leí datos inválidos");
+            System.out.println("Se dio una excepción");
+        }
+
+        System.out.println("Se siguió con la ejecución");
+    }
+}
