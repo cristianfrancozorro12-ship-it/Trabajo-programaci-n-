@@ -1,0 +1,39 @@
+/* se importan las clases ActionEvent y ActionListener para manejar los eventos */
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+/* se importa la clase AbsoluteConstraints y AbsoluteLayout para 
+poder utilizar el administrador de elementos gráficos Absolute Layout */
+import org.netbeans.lib.awtextra.AbsoluteConstraints;
+import org.netbeans.lib.awtextra.AbsoluteLayout;
+
+public class Tienda {
+
+    public Tienda() {
+
+        /* Se crea un objeto de la clase JFrame, éste será el panel que 
+        contendrá todos los elementos gráficos de la interfaz. */
+        JFrame panel = new JFrame("Calculadora para Tienda");
+
+        /* Se crean las etiquetas que aparecerán del lado izquierdo en la ventana */
+        JLabel productos = new JLabel("Productos");
+        JLabel producto1 = new JLabel("Refrescos: ");
+        JLabel producto2 = new JLabel("Papas: ");
+        JLabel producto3 = new JLabel("Paletas: ");
+        JLabel producto4 = new JLabel("Agua: ");
+        JLabel producto5 = new JLabel("Pan: ");
+
+        /* se crea la etiqueta y los campos de texto que aparecerán en medio
+        de la ventana. Los cuadros de texto se inicializan con "0" */
+        JLabel cantidades = new JLabel("Cantidad");
+
+        final JTextField campo1 = new JTextField(3);
+        campo1.setText("0");
+        final JTextField campo2 = new JTextField(3);
+        campo2.setText("0");
+        final JTextField campo3 = new JTextField(3);
+        campo3.setText("0");
+        final JTextField campo4 = new JTextField(3);
+        campo4.setText("0");
+        final JTextField campo5 = new JTextField(3);
+        campo5.setText("0");
